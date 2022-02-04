@@ -1,0 +1,21 @@
+digraph Tree {
+node [shape=box] ;
+rankdir=LR ;
+0 [label="source_friend_referral <= 0.5\ngini = 0.5\nsamples = 100.0%\nvalue = [0.5, 0.5]"] ;
+1 [label="source_direct_traffic <= 0.5\ngini = 0.499\nsamples = 93.5%\nvalue = [0.52, 0.48]"] ;
+0 -> 1 [labeldistance=2.5, labelangle=-45, headlabel="True"] ;
+2 [label="operative_system_iOS <= 0.5\ngini = 0.5\nsamples = 74.4%\nvalue = [0.502, 0.498]"] ;
+1 -> 2 ;
+3 [label="operative_system_mac <= 0.5\ngini = 0.498\nsamples = 52.0%\nvalue = [0.528, 0.472]"] ;
+2 -> 3 ;
+4 [label="gini = 0.496\nsamples = 46.1%\nvalue = [0.545, 0.455]"] ;
+3 -> 4 ;
+5 [label="gini = 0.489\nsamples = 5.9%\nvalue = [0.427, 0.573]"] ;
+3 -> 5 ;
+6 [label="gini = 0.495\nsamples = 22.4%\nvalue = [0.451, 0.549]"] ;
+2 -> 6 ;
+7 [label="gini = 0.479\nsamples = 19.1%\nvalue = [0.601, 0.399]"] ;
+1 -> 7 ;
+8 [label="gini = 0.435\nsamples = 6.5%\nvalue = [0.32, 0.68]"] ;
+0 -> 8 [labeldistance=2.5, labelangle=45, headlabel="False"] ;
+}
